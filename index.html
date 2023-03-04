@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Temperature Hot</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url(images/bg-image.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body onload="loadWeather('Chittagong')">
+
+    
+    <div class="container">
+        <form class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input id="search-field" type="text" class="form-control"
+                    placeholder="Enter a location for Weather ...">
+                <div class="input-group-append">
+                    <button id="search-btn" type="button" class="btn btn-danger">Search</button>
+                </div>
+            </div>
+        </form>
+        <div  class="d-flex justify-content-center">
+            <div id="loader" class=" d-none spinner-border text-white" style="width: 5rem; height: 5rem;"  role="status">
+            </div>
+        </div>
+
+        <div id="no-data-alert" class="d-none w-50 mx-auto alert alert-dark text-center font-weight-bold h3" role="alert">
+            No Data Found
+          </div> 
+          
+        <div id="weather-status" class="d-none weather-status text-white text-center">
+            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+            <h1 id="city"></h1>
+            <h3><span id="temp"></span>&deg;C</h3>
+            <h1 class="lead" id="weather"></h1>
+        </div>
+    </div>
+
+    <!-- js file -->
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
